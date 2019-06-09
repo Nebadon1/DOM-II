@@ -55,14 +55,28 @@ introImg.addEventListener("mouseover", function( event ) {
   let containerprop = document.querySelector(".home");
   //console.log(containerprop);
   containerprop.addEventListener("click", function(event){
+    
       containerprop.style.background = "yellow";
   })
 
-  let buttonLow = document.querySelector(".btn");
- //console.log(buttonLow);
+  let allButtons = document.querySelectorAll(".content-pick .destination .btn")
 
-  buttonLow.addEventListener("click", function(event){
-      event.stopPropagation();
-      buttonLow.style.background = "salmon";
-  })
-   
+  allButtons[0].addEventListener("click", function(event){
+    event.stopPropagation();
+    allButtons[0].style.background = "salmon";
+})
+
+  
+  
+  allButtons[1].addEventListener("click", function(event){
+    event.stopPropagation();
+    allButtons[1].style.background = "salmon";
+})
+
+ allButtons[2].addEventListener("click", function(event){
+    event.stopPropagation();
+    allButtons[2].style.background = "salmon";
+})
+  
+
+ 
