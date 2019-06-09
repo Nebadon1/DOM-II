@@ -32,7 +32,37 @@ introImg.addEventListener("mouseover", function( event ) {
   window.addEventListener("wheel", function( event ){
     var x = document.getElementById("toast")
     x.className = "show";
-    setTimeout(function(){ x.className = x.className.replace("show", ""); }, 7000);
+    setTimeout(function(){ x.className = x.className.replace("show", ""); }, 5000);
 
     
   });
+
+  //BDLCLICK
+
+  let grumpy = document.querySelector("img");
+//console.log(grumpy)
+  //console.log(grumpy);
+ 
+  grumpy.addEventListener("dblclick", function( event){
+    grumpy.style.display = "none";
+    Image.textContent = "WHAT HAVE YOU DONE"
+
+  });
+
+
+  //propagation 
+
+  let containerprop = document.querySelector(".home");
+  //console.log(containerprop);
+  containerprop.addEventListener("click", function(event){
+      containerprop.style.background = "yellow";
+  })
+
+  let buttonLow = document.querySelector(".btn");
+ //console.log(buttonLow);
+
+  buttonLow.addEventListener("click", function(event){
+      event.stopPropagation();
+      buttonLow.style.background = "salmon";
+  })
+   
